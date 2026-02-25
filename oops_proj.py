@@ -22,7 +22,7 @@ class chatbook:
         elif user_input == "2":
             self.signin()
         elif user_input == "3":
-            self.writing_post()
+            self.my_post()
         elif user_input == "4":
             self.message_Friend()
         else:
@@ -61,6 +61,27 @@ class chatbook:
         self.menu()
 
 
+    def my_post(self):
+        if self.loggedin == True:    
+            post = input("Write your post here : ")
+            print("\n")
+            print(f"following content has been posted -> {post}")
+        else:
+            print("\n please log in into your account for posting a message")
+        print("\n")
+        self.menu()
 
-obj = chatbook()
+    def message_Friend(self):
+        if self.loggedin == True:    
+            friend_name = input("enter the name/email of the freind to message")
+            own_mail = input("write your own mail")
+            msg = input("write the message that you want to send to your friend ")
+            print("\n")
+            print(f"following content has been posted -> {msg}")
+            
+
+
+
+# user1 = chatbook()
         
+# using this file as a module  we can import the classes into other module 

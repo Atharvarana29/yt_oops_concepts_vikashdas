@@ -155,11 +155,14 @@ Now each student knows they must answer their own name.
 2 . class and obj(example)
 class has data/attribute and func/methods
     >attributes get called self , methods are called manually
-why python is an oops language ?
+3.why python is an oops language ?
 in python everything is object so we say python is an oops language 
 
-advantages of oops "
+4.Advantages of oops "
  > you can create your own dataype 
  >code resuabillity
  >debugging : humlog ko pata chal jata hai ki exactly kon sae file mae kon sae block mae problem hai 
  >easy to colab
+
+ 5. End to end project (chatbook class ) 
+>encapsulation 
