@@ -172,8 +172,21 @@ in python everything is object so we say python is an oops language
  >easy to colab
 
  5. End to end project (chatbook class ) 
- >function vs method 
- > other dunder method  
->encapsulation : when we don't want to user to access all our attributes present in the class due to some sensitive or other reasons 
->getter and setter
->Static method
+    >function vs method 
+    > other dunder method  
+
+    >encapsulation : when we don't want to user to access all our attributes present in the class due to some sensitive or other reasons 
+    >getter and setter
+    >Static method
+
+>Inheritance 
+    >Inheritance code example
+    >why Inheritance is needed ?(code resuability , parent has no access to child class)
+    >what gets inherited ? constructor , non private attributes , non private methods
+    >constructor overloading & method overloading
+    >super keyword(can be used inside class , can not access variables/attributes, used only inside child class)
+        >🧠 Important Inheritance Rule
+            Situation	                What Happens
+            Child has NO constructor	Parent constructor runs automatically
+            Child HAS constructor	    Parent constructor does NOT run unless you call super()
+    >types of Inheritance - 1.single Inheritance  2 .mutlilevel 3 . hirerac 4 .mutliple diamond problem 5 . hybrid 
