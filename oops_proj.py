@@ -1,11 +1,42 @@
 class chatbook:
     # initialized the constructor 
+
+    # making a static method : to make the increament everytime a new object is called 
+    __user_id = 1  # static method ko self access nahi kar sakta , usko class access kar sakta hai 
+
     def __init__(self): # self -> refers to the newly created instance 
+        self.__name = "default user " # now if we want to hide or protect this attribute then we can use 
+        # but if we want to access this we need to use : user1.__chatbook__name format 
+        # self.user_id = 0
+        # self.user_id+=1 #i.e we want ki har baar jab bhi new user bane tab uski id +1 hoti jaye 
+        # abhi ye upar wala acts like dynamic variable because har baar object call hone par iski value reset ho jaa rahi hai and so we need to use static method i.e static variable 
+        self.id = chatbook.__user_id # static variable ko self nahi class access karega 
+        chatbook.__user_id+=1
         self.username = ''
         self.password = ''
         self.loggedin = False # initially
-        self.menu() # method nniche alag sae bhi bana kae upar yaha par attribute kae taur par bhi call kar sakte hai . jo bhi method ko call karna hai usko yaha likh dena hai 
+        # self.menu() # method nniche alag sae bhi bana kae upar yaha par attribute kae taur par bhi call kar sakte hai . jo bhi method ko call karna hai usko yaha likh dena hai 
     # humare constructor kae andar hi yae logic tha ki menu ko call karna hai  
+
+# making getter and setter for static methods 
+# using a decorator : ye batane ka ek tarika hai ki ye ek static method hai
+    @staticmethod
+    def get_id():
+        return chatbook.__user_id
+    
+    @staticmethod # static method ko self dene ki jarurat hai hi nahi, because self tab dete hai jab humara object usko access kar raha ho 
+    # but static method  ko access karne kae liye object ki jarurat hi nahi hai 
+    def set_id(val): # directly we can pass the argument , and can directly call it using class name 
+        chatbook.__user_id = val
+        return chatbook.__user_id
+
+# getter
+    def get_name(self):
+        return self.__name
+
+# setter
+    def set_name(self ,value): # value => jo naya name hum set karna chatae hai 
+        self.__name = value
 
     # defining the main menu method 
     def menu(self):

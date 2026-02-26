@@ -15,7 +15,10 @@ class employee:
         print("attributes/data have been initiated")
 
         # whenever we define a method inside a class then it is called a function 
-        # difference between method and function 
+        # difference between method and function :
+        # jab hum kisi function ko pakad kae uske upar dot use kar kae koi attribute call karate hai that is called a method 
+
+
 
     def travel(self , destination):
         print("this travel method was called manually")
@@ -47,3 +50,9 @@ sam.travel("kerala")
 # these all happens because all those functionalities are being defined inside the constructor attribute and not defined as the methods which need to specifically called . 
 
 print(type(sam))
+
+
+# if suppose we have not created a attribute inside the constructor then also we can create it from the outside
+
+sam.name = "Sam kuamr"
+print(sam.name)

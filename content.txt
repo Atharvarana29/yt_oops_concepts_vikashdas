@@ -141,6 +141,7 @@ If teacher says:
 Now each student knows they must answer their own name.
 
 👉 `self` means **"this object's own data"**
+kyoki humlog ka object hi hai jo uss class kae attributes ko access kar payega 
 
 ---
 
@@ -148,8 +149,14 @@ Now each student knows they must answer their own name.
 
 > `self` is a reference to the current instance of a class and is used to access instance variables and methods inside the class.
 
+testing the 'self'
+sam = employee()
+print(id(sam))
+=> both the id of sam and self will be same meaning they both are present at the same memory adddress as and no two different varible can be present at the same memory address so they both sam and self are the same 
+==> aur jo bhi hum koi object use kar rahe hote hai tab ye self khud utt kae uske andar jaha self call ho raha hai waha chala jata hume khud alag sae employee1 , employee2 , employee3 etc... dene ki jarurat nahi hoti 
+=> humlog ka object hi hua self 
+### hum jitni baar apne class ko bulate hai alag alag object name (sam = employee() and shaktiman = employee() ) sae utni baar uski memory address id change ho jati hai but agar sam and self dono same object ko denote kar raha hai tab doesn't matter kitni baar self ko call karte hai id same rehti hai  
 ---
-
 
 
 2 . class and obj(example)
@@ -165,4 +172,8 @@ in python everything is object so we say python is an oops language
  >easy to colab
 
  5. End to end project (chatbook class ) 
->encapsulation 
+ >function vs method 
+ > other dunder method  
+>encapsulation : when we don't want to user to access all our attributes present in the class due to some sensitive or other reasons 
+>getter and setter
+>Static method
